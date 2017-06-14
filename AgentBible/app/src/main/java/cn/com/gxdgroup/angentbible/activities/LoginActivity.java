@@ -152,7 +152,7 @@ public class LoginActivity extends BaseActivity {
                 break;
             case R.id.bt_get_code:
                 UIUtils.showToast("获取验证码");
-                getVerifyCode();
+                //getVerifyCode();
                 break;
         }
     }

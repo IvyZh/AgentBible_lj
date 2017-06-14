@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:padding="@dimen/margin_lr"
+                    android:text="房型" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/cb_house_layout_1"
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:text="1室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_layout_2"
+                        android:text="2室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_layout_3"
+                        android:text="3室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        android:id="@+id/cb_house_layout_4"
+                        style="@style/cb_select"
+                        android:text="4室" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_layout_5"
+                        android:text="5室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_layout_6"
+                        android:text="5室以上" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="3室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="4室" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--朝向-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:padding="@dimen/margin_lr"
+                    android:text="朝向" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_orientation_1"
+                        android:text="东" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_orientation_2"
+                        android:text="南" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_orientation_3"
+                        android:text="西" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        android:id="@+id/cb_house_orientation_4"
+                        style="@style/cb_select"
+                        android:text="北" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_orientation_5"
+                        android:text="南北" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="5室以上" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="3室" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="4室" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--面积-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:padding="@dimen/margin_lr"
+                    android:text="面积 (㎡)" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        android:id="@+id/cb_house_area_1"
+                        style="@style/cb_select"
+                        android:text="50以下" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_2"
+                        android:text="50-70" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_3"
+                        android:text="70-79" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_4"
+                        android:text="90-120" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_5"
+                        android:text="120-150" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_6"
+                        android:text="150-200" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_area_7"
+                        android:text="200以上" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        style="@style/cb_select"
+                        android:visibility="invisible"
+                        android:text="4室" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--楼龄-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_dark"
+                    android:textSize="15sp"
+                    android:padding="@dimen/margin_lr"
+                    android:text="楼龄" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:layout_marginLeft="@dimen/margin_lr"
+                        android:id="@+id/cb_house_year_1"
+                        style="@style/cb_select"
+                        android:text="5年以内" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_year_2"
+                        android:text="5-10年" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        style="@style/cb_select"
+                        android:id="@+id/cb_house_year_3"
+                        android:text="10-20年" />
+
+                    <View style="@style/weight_view" />
+
+                    <CheckBox
+                        android:layout_marginRight="@dimen/margin_lr"
+                        android:id="@+id/cb_house_year_4"
+                        style="@style/cb_select"
+                        android:text="20年以上" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View style="@style/divide_style" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/ll_clear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="154"
+            android:background="@drawable/selector_common"
+            android:gravity="center"
+            android:onClick="contact">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="清空条件"
+                android:textColor="@color/text_light"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="208"
+            android:background="@color/common_blue"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

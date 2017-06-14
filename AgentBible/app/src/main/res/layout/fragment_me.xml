@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/me_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="198dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bg" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_portrait"
+                    android:src="@drawable/ico_personality3"
+                    android:layout_width="86dp"
+                    android:layout_height="86dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/iv_portrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:text="立即登录"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                style="@style/me_item"
+                android:id="@+id/rl_collection_house">
+
+                <ImageView
+                    android:id="@+id/iv_scfy"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_scfy" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_scfy"
+                    android:text="收藏房源" />
+
+                <ImageView style="@style/me_item_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_style_left" />
+
+            <RelativeLayout
+                style="@style/me_item"
+                android:id="@+id/rl_collection_people">
+
+                <ImageView
+                    android:id="@+id/iv_scky"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_scky" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_scky"
+                    android:text="收藏客源" />
+
+                <ImageView style="@style/me_item_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/common_bg" />
+
+
+            <RelativeLayout
+                style="@style/me_item"
+                android:id="@+id/rl_feedback">
+
+                <ImageView
+                    android:id="@+id/iv_reflact"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_reflact" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_reflact"
+                    android:text="用户反馈" />
+
+                <ImageView style="@style/me_item_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_style_left" />
+
+            <RelativeLayout
+                style="@style/me_item"
+                android:id="@+id/rl_invite">
+
+                <ImageView
+                    android:id="@+id/iv_invite"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_invite" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_invite"
+                    android:text="邀请好友" />
+
+                <ImageView style="@style/me_item_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_style_left" />
+
+            <RelativeLayout
+                style="@style/me_item"
+                android:id="@+id/rl_update">
+
+                <ImageView
+                    android:id="@+id/iv_update"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_update" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_update"
+                    android:text="检查更新" />
+
+                <ImageView style="@style/me_item_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_style_left" />
+
+            <RelativeLayout
+
+                android:id="@+id/rl_setting"
+                style="@style/me_item">
+
+                <ImageView
+                    android:id="@+id/iv_setting"
+                    style="@style/me_item_iv"
+                    android:src="@drawable/ico_setting" />
+
+                <TextView
+                    style="@style/me_item_tv"
+                    android:layout_toRightOf="@id/iv_setting"
+                    android:text="设置" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

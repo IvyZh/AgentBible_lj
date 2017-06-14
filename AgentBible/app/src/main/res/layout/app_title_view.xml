@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/common_blue">
+
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/margin_lr"
+            android:paddingRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/btn_back" />
+
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_lr"
+            android:text="上海" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_down"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_pulldown_data" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search_arrow"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/iv_arrow_down"
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_head_search_bg">
+
+            <ImageView
+                android:id="@+id/iv_search_arrow"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_lr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_search_small" />
+
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/iv_search_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#99ffffff"
+                android:layout_centerVertical="true"
+                android:text="请输入小区名称" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_head_search_bg">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_lr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_search_small" />
+
+            <TextView
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#99ffffff"
+                android:layout_centerVertical="true"
+                android:text="请输入小区名称" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:id="@+id/bt_tab_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_tab_left_pre"
+                android:textColor="@color/common_blue"
+                android:textSize="14sp"
+                android:text="购房客户" />
+
+            <Button
+                android:id="@+id/bt_tab_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_tab_right_normal"
+                android:text="租房客户" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:text="Title" />
+
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ico_like" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="详情" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fr_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+

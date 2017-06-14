@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="65dp">
+
+        <TextView
+            android:id="@+id/tv_house_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="滨湖半岛公馆 2室2厅1卫 109㎡"
+            android:textColor="@color/text_dark"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_below="@id/tv_house_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="签约日期：2016-05-06"
+            android:textColor="@color/text_grey"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/deal" />
+    </RelativeLayout>
+
+
+    <View style="@style/divide_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout style="@style/home_menu_rl">
+
+            <TextView
+                android:id="@+id/tv_price_type"
+                style="@style/home_menu_tv"
+                android:text="签约价格" />
+
+            <TextView
+                android:id="@+id/tv_house_price"
+                style="@style/second_house_detail"
+                android:text="1800万" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/home_menu_rl">
+
+            <TextView
+                style="@style/home_menu_tv"
+                android:text="单价" />
+
+            <TextView
+                android:id="@+id/tv_house_area"
+                style="@style/second_house_detail"
+                android:text="12343元/㎡" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_lr"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_l"
+                    android:text="装修:"
+                    android:id="@+id/textView4" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="经济住宅" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_l"
+                    android:text="年代:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="1999" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_l"
+                    android:text="楼层:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="12层" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_l"
+                    android:text="朝向:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="南" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

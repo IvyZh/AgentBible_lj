@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="226dp">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_temp_banner" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout style="@style/home_menu_rl">
+
+            <TextView
+                android:id="@+id/tv_price_type"
+                style="@style/home_menu_tv"
+                android:text="成交套数" />
+
+            <TextView
+                android:id="@+id/tv_house_price"
+                style="@style/second_house_detail"
+                android:text="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/home_menu_rl"
+            android:layout_weight="2">
+
+            <TextView
+                style="@style/home_menu_tv"
+                android:text="挂牌套数" />
+
+            <TextView
+                android:id="@+id/tv_house_layout"
+                style="@style/second_house_detail"
+                android:text="20" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/home_menu_rl">
+
+            <TextView
+                style="@style/home_menu_tv"
+                android:text="均价涨跌" />
+
+            <TextView
+                android:id="@+id/tv_house_area"
+                style="@style/second_house_detail"
+                android:drawableRight="@drawable/ico_up"
+                android:text="3.12%" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

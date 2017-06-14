@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="colorAccent">#3399FF</color>
+
+    <color name="common_blue">#3399FF</color>
+    <color name="common_orange">#F59403</color>
+    <color name="common_red">#FC3232</color>
+    <color name="common_green">#00b247</color>
+    <color name="common_bg">#ecf1f8</color>
+    <color name="divide_color">#C3C5C5</color>
+
+
+    <color name="text_dark">#222222</color>
+    <color name="text_grey">#707070</color>
+    <color name="text_light">#bab9b9</color>
+
+
+    <color name="bottom_text_nor">#A0A0A0</color>
+    <color name="bottom_text_pre">#3399FF</color>
+    <color name="home_menu_text">#434343</color>
+
+
+    <color name="login_title">#29D9EA</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="shape_select_stroke">#BFBFBF</color>
+
+    <!--SearchBar-->
+    <color name="internal_search_blue">#007aff</color>
+    <color name="internal_search_grey">#888888</color>
+    <color name="internal_search_inactive">#F2F2F2</color>
+
+</resources>

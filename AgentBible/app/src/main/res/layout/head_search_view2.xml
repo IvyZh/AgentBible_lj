@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/common_blue"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="@dimen/margin_lr"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_lr"
+        android:layout_toLeftOf="@id/tv_cancle"
+        android:background="@drawable/shape_head_search_bg">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_lr"
+            android:src="@drawable/ico_search_small"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/x_button"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toLeftOf="@id/iv_clear"
+            android:layout_weight="0.33"
+            android:background="@android:color/transparent"
+            android:hint="请输入小区名称"
+            android:imeOptions="actionSearch"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textColorHint="#99ffffff"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"
+            android:theme="@style/InternalSearchEditTextTheme" />
+    </RelativeLayout>
+
+</RelativeLayout>

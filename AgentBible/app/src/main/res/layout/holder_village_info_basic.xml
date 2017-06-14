@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_around_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <Button
+            style="@style/card_title_tv"
+            android:background="@drawable/selector_common"
+            android:text="基本信息" />
+    </RelativeLayout>
+
+
+    <View style="@style/divide_style" />
+
+    <LinearLayout
+        style="@style/valliage_basic_ll"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            style="@style/valliage_basic_label_tv"
+            android:text="小区地址:" />
+
+        <TextView
+            style="@style/valliage_basic_tv"
+            android:text="闵行区莘庄工业园区2栋320号" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="所属区域:"
+                    android:id="@+id/textView4" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="经济住宅" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="绿化率:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="40%" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="物业类型:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="闵行-莘庄" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="容积率:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="32%" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/valliage_basic_ll">
+
+        <TextView
+            style="@style/valliage_basic_label_tv"
+            android:text="物业费:" />
+
+        <TextView
+            style="@style/valliage_basic_tv"
+            android:text="0.45元/平米/月" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="建筑结构:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="钢筋混凝土" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="产权:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="70年" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="建筑面积:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="--" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="竣工时间:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="1999" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="邮编:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="2637182" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="环线位置:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="住宅、普通住宅" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="建筑类别:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="砖混" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="总户数:"
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="32户" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="占地面积:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="6698平方米" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="物业电话:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="021-3569874" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/valliage_basic_ll">
+
+        <TextView
+            style="@style/valliage_basic_label_tv"
+            android:text="开发商:" />
+
+        <TextView
+            style="@style/valliage_basic_tv"
+            android:text="上海市莫某开发商" />
+    </LinearLayout>
+
+</LinearLayout>

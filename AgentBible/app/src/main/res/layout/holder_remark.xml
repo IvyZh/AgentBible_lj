@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/card_title_tv"
+        android:text="补充说明" />
+
+    <View style="@style/divide_style" />
+
+
+    <TextView
+        android:id="@+id/expandable_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_lr"
+        android:textSize="15sp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:ellipsize="end"
+        android:maxLines="8"
+        android:text="星辰园，其他小区不考虑。采光要好，高楼层也行 好毛坯。产权简单清晰能上户口！ 欢迎中介，非诚勿扰！ 个人个人，我是个人！ 联系我时，请说是在58同城上看到的，谢谢！"
+        android:textColor="@color/text_dark" />
+
+
+</LinearLayout>

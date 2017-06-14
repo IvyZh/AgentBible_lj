@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_char_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_lr"
+                android:text="热门"
+                android:textColor="@color/text_dark" />
+        </RelativeLayout>
+
+        <View style="@style/divide_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_hot_city_ana"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_hot_city_ana"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_citywide" />
+
+                <TextView
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_hot_city_ana"
+                    android:text="全市分析" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_hot_area"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_area"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_quyu" />
+
+                <TextView
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_area"
+                    android:text="热门区域" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bankuai"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_keyuan"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_bankuai" />
+
+                <TextView
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_keyuan"
+                    android:text="热门板块" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_hot_garden"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_second_hand_house"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_hot_area" />
+
+                <TextView
+                    android:id="@+id/tv_second_hand_house"
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_second_hand_house"
+                    android:text="热门小区" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/home_menu_rl">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/home_menu_rl">
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_data_show"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_data_show"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_hot_area" />
+
+                <TextView
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_data_show"
+                    android:text="数据统计" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_people_manager"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_people_manager"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_hot_area" />
+
+                <TextView
+                    android:id="@+id/tv_people_manager"
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_people_manager"
+                    android:text="人员管理" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_data_ana"
+                style="@style/home_menu_rl">
+
+                <ImageView
+                    android:id="@+id/iv_data_ana"
+                    style="@style/hot_menu_iv"
+                    android:src="@drawable/ico_hot_area" />
+
+                <TextView
+                    android:id="@+id/tv_data_ana"
+                    style="@style/home_menu_tv"
+                    android:layout_below="@id/iv_data_ana"
+                    android:text="数据录入" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

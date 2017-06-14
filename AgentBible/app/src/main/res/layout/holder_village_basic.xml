@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_village_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/card_title_tv"
+            android:background="@drawable/selector_common"
+            android:text="基本信息" />
+
+        <ImageView style="@style/card_arrow" />
+    </RelativeLayout>
+
+
+    <View style="@style/divide_style" />
+
+    <LinearLayout
+        style="@style/valliage_basic_ll"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            style="@style/valliage_basic_label_tv"
+            android:text="小区地址:" />
+
+        <TextView
+            style="@style/valliage_basic_tv"
+            android:text="闵行区莘庄工业园区2栋320号" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/valliage_basic_ll">
+
+        <TextView
+            style="@style/valliage_basic_label_tv"
+            android:text="物业费:" />
+
+        <TextView
+            style="@style/valliage_basic_tv"
+            android:text="0.45元/平米/月" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="容积率:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="--" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="楼栋数:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="70年" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv"
+                    android:text="建筑年代:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="1999" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="绿化率:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="--" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="建筑类别:" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="砖混" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/valliage_basic_ll">
+
+                <TextView
+                    style="@style/valliage_basic_label_tv_no_margin"
+                    android:text="建筑结构:"
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    style="@style/valliage_basic_tv"
+                    android:text="--" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

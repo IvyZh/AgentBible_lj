@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+    <cn.com.gxdgroup.angentbible.ui.AppTitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_tite_listview"
+        android:layout_below="@id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/rl_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_marginLeft="@dimen/margin_lr"
+                android:id="@+id/tv_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="17sp"
+                android:textColor="@color/text_dark"
+                android:text="月排名" />
+
+            <TextView
+                android:layout_toRightOf="@id/tv_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:id="@+id/tv_rank_date"
+                android:textColor="@color/text_grey"
+                android:text="2016-08" />
+
+            <LinearLayout
+                android:id="@+id/tab_month_year"
+                android:background="@drawable/shape_more_select_normal"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/margin_lr">
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cb_month"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/selector_tv_month_year"
+                        android:checked="true"
+                        android:text="月" />
+
+                    <View
+                        android:layout_width="0.2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/shape_select_stroke" />
+
+                    <RadioButton
+                        android:id="@+id/cb_year"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textColor="@drawable/selector_tv_month_year"
+                        android:text="年" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/divide_style" />
+
+        <ListView
+            android:id="@+id/lv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/list_divider_lr"
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0.5dp" />
+
+        <View style="@style/divide_style" />
+
+    </LinearLayout>
+
+    <cn.com.gxdgroup.angentbible.ui.ObservableScrollView
+        android:id="@+id/sv_city_ana"
+        android:visibility="gone"
+        android:layout_below="@id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--成交分析-->
+            <FrameLayout
+                android:id="@+id/fr_deal_analysis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--成交总金额分析-->
+            <FrameLayout
+                android:id="@+id/fr_deal_volume_analysis"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_height="match_parent" />
+
+            <!--挂牌分析-->
+            <FrameLayout
+                android:id="@+id/fr_quoted_analysis"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_height="match_parent" />
+
+            <!--浏览量分析-->
+            <FrameLayout
+                android:id="@+id/fr_pv_analysis"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </cn.com.gxdgroup.angentbible.ui.ObservableScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e1000000">
+
+        <TextView
+            android:layout_marginLeft="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/tv_city_ana"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="全市分析" />
+
+
+        <TextView
+            android:id="@+id/tv_hot_area"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:text="热门区域" />
+
+
+        <TextView
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/tv_hot_bankuai"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="热门板块" />
+
+        <TextView
+            android:layout_marginRight="@dimen/margin_lr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:id="@+id/tv_hot_garden"
+            android:textSize="15sp"
+            android:text="热门小区" />
+
+    </LinearLayout>
+
+</RelativeLayout>

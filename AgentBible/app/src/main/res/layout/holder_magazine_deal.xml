@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tv_char_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_lr"
+            android:text="成交"
+            android:textSize="18sp"
+            android:textColor="@color/text_dark" />
+    </RelativeLayout>
+
+    <View style="@style/divide_style" />
+
+
+    <TextView
+        android:id="@+id/tv_char_desc"
+        android:layout_margin="@dimen/margin_lr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:textColor="@color/text_dark"
+        android:text="湖滨半岛公馆最新成交均价为30000元/㎡，环比上月上 涨10.00%。"></TextView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_lr"
+        android:layout_marginRight="@dimen/margin_lr"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_y_left"
+            android:text="均价(元/平米)"
+            style="@style/tv_12_grey_style" />
+
+        <TextView
+            android:id="@+id/tv_y_right"
+            android:layout_alignParentRight="true"
+            android:text="成交量(套)"
+            style="@style/tv_12_grey_style" />
+
+    </RelativeLayout>
+
+    <com.github.mikephil.charting.charts.CombinedChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/margin_lr"
+        android:layout_marginRight="@dimen/margin_lr"
+        android:layout_marginTop="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ico_price" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:text="价格"
+            style="@style/tv_12_grey_style" />
+
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="5dp"
+            android:layout_marginLeft="8dp"
+            android:background="#D6EDFF" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:text="成交套数"
+            style="@style/tv_12_grey_style" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_table_desc"
+        android:layout_margin="@dimen/margin_lr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:text="湖滨半岛公馆本月共成交7套，其中一居1套，两居1套，三居5套，其他0套。"
+        android:textColor="@color/text_dark" />
+
+    <RelativeLayout
+        android:id="@+id/rl_table_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_lr"
+        android:layout_marginRight="@dimen/margin_lr">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark"
+            android:text="户型/成交日期" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark"
+            android:text="成交价" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:textColor="@color/text_dark"
+            android:text="单价" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

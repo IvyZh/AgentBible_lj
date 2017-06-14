@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 渐变 -->
+    <gradient
+        android:startColor="#1aa0ff"
+        android:endColor="#29daea"
+        android:useLevel="true"
+        android:type="linear"
+        android:angle="90"
+        android:centerX="0"
+        android:centerY="0"
+        android:gradientRadius="90" />
+
+
+    <!-- 大小 -->
+    <size
+        android:width="150dp"
+        android:height="250dp" /><!-- 宽度和高度 -->
+
+
+</shape>

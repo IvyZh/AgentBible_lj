@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/selector_common"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_rank_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_lr"
+                android:textSize="21sp"
+                android:text="01" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_toRightOf="@id/tv_rank_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_dark"
+                android:layout_centerVertical="true"
+                android:text="黄浦" />
+
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_marginRight="@dimen/margin_lr"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/pull_down" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_toLeftOf="@id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/text_dark"
+                android:layout_centerVertical="true"
+                android:text="5000套" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/fr_chart"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eeff00" />
+    </LinearLayout>
+</RelativeLayout>

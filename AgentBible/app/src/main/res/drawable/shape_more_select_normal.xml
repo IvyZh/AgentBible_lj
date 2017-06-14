@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- 渐变 -->
+    <corners android:radius="0dp" />
+
+
+    <!-- 描边 -->
+    <stroke
+        android:width="0.2dp"
+        android:color="@color/shape_select_stroke" />
+
+    <!-- 大小 -->
+    <size
+        android:width="68dp"
+        android:height="26dp" /><!-- 宽度和高度 -->
+
+    <solid android:color="@color/white" />
+
+
+</shape>

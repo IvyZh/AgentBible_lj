@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        style="@style/card_title_tv"
+        android:text="房源介绍" />
+
+    <View style="@style/divide_style" />
+
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandableTextView:maxCollapsedLines="8"
+        expandableTextView:animDuration="200">
+
+        <TextView
+            android:id="@+id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_lr"
+            android:textSize="15sp"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.5"
+            android:ellipsize="end"
+            android:maxLines="8"
+            android:textColor="@color/text_dark"
+            android:text="实地看房：2房1厅1卫1阳台，客厅朝南带大阳台， 厨卫房朝北，房间朝南，南北通透，全明户型。 地理位置：位于泰和西路/水产西路，宝山顾村核心地段，靠近1号线共富新村站！距离世纪联华大超市五分钟步行，外环高架车程五分钟。 小区配置：高端物业（银顶峰物业）、小区内小桥流水、有公园等多处景观、儿童游乐场，绿化率40%。 商圈配套：紧邻顾村商圈，靠近顾村公园，浦西大的湿地氧吧。对口宝山顾村小学及顾村中学。" />
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/pull_down"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@android:color/transparent" />
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+</LinearLayout>

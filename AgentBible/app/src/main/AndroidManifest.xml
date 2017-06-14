@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.com.gxdgroup.angentbible">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 百度地图权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launcher_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.HouseResourcesListActivity" />
+        <activity android:name=".activities.HouseDetailsActivity" />
+        <activity android:name=".activities.VillageInfoActivity" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.EquipmentActivity" />
+        <activity android:name=".activities.ContactActivity" />
+        <activity android:name=".activities.PhotoViewerActivity" />
+        <activity android:name=".activities.CollectionActivity" />
+        <activity android:name=".activities.DataAnalysisActivity" />
+        <activity android:name=".activities.VillageBasicInfoActivity" />
+        <activity android:name=".activities.VillageMagazineActivity" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="dzsebwsRRQoRqP3e4vEHk42LARq0wrb8" />
+
+        <!-- QQ登陆 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105165474" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信 -->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true" />
+        <activity android:name=".activities.temp.PeopleManagerActivity"></activity>
+        <activity android:name=".activities.temp.DataInputActivity"></activity>
+        <activity android:name=".activities.temp.MonthProduceActivity" />
+        <activity android:name=".activities.temp.ProduceDetailsActivity" />
+        <activity android:name=".activities.temp.StatisticsMenuActivity" />
+
+
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="lv.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+    </application>
+
+</manifest>

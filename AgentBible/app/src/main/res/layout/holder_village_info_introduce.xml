@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_around_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <Button
+            style="@style/card_title_tv"
+            android:background="@drawable/selector_common"
+            android:text="小区简介" />
+    </RelativeLayout>
+
+    <View style="@style/divide_style" />
+
+    <TextView
+        android:id="@+id/expandable_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_lr"
+        android:textSize="15sp"
+        android:text="      朱梅小区——位于上中西路925弄，由上海沪兴发展有限公司开发展有限公司开发 朱梅小区——位于上中西路925弄，由上海沪兴发展有限公司开发展有限公司开发 朱梅小区——位于上中西路925弄，由上海沪兴发展有限公司开发展有限公司开发"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:ellipsize="end"
+        android:maxLines="8"
+        android:textColor="@color/text_dark" />
+
+</LinearLayout>

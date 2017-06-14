@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_common"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/margin_lr"
+        android:paddingRight="@dimen/margin_lr"
+        android:paddingTop="8dp">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="124dp"
+            android:layout_height="92dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ico_picture" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_cover"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="闵行区莘庄大学城小区"
+            android:textColor="#000000"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/iv_cover"
+            android:text="2室2厅1卫"
+            android:textColor="#232323"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_layout"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_address"
+            android:text="300万"
+            android:textColor="#FC3232"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_layout"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/iv_cover"
+            android:text="90㎡"
+            android:textColor="#232323"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_unit_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_area"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_layout"
+            android:layout_marginLeft="2dp"
+            android:text="36588元/㎡"
+            android:textColor="#707070"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_area"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/iv_cover"
+            android:text="张先生 个人"
+            android:textColor="#707070"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_name"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_area"
+            android:text="今天发布"
+            android:textColor="#707070"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

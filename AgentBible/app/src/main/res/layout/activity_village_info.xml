@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <cn.com.gxdgroup.angentbible.ui.AppTitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--轮播图  -->
+            <FrameLayout
+                android:id="@+id/fr_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+            <!-- 小区基本信息-->
+            <FrameLayout
+                android:id="@+id/fr_village_basic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+
+            <!--小区价格走势模块-->
+            <FrameLayout
+                android:id="@+id/fr_garden_price"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" />
+
+            <!--小区月报模块-->
+            <FrameLayout
+                android:id="@+id/fr_garden_magazine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" />
+
+
+            <!--周边配套模块 地图-->
+
+            <FrameLayout
+                android:id="@+id/fr_arround_equipment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" />
+
+            <!--小区二手房模块-->
+            <FrameLayout
+                android:id="@+id/fr_second_house"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@color/white" />
+            <!--小区租房模块-->
+            <FrameLayout
+                android:id="@+id/fr_zufang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white" />
+            <!--小区成交记录模块-->
+            <FrameLayout
+                android:id="@+id/fr_house_deal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

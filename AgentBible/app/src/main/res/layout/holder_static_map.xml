@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_around_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_common"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/card_title_tv"
+            android:text="周边配套" />
+
+        <ImageView style="@style/card_arrow" />
+    </RelativeLayout>
+
+    <View style="@style/divide_style" />
+
+    <ImageView
+        android:id="@+id/iv_static_map"
+        android:layout_width="fill_parent"
+        android:layout_height="294dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_temp_carousel" />
+
+
+</LinearLayout>

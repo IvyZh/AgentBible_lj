@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/common_blue">
+
+
+    <RelativeLayout
+        android:id="@+id/internal_rv_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/internal_searchbar_radius"
+        android:layout_marginLeft="@dimen/margin_lr"
+        android:layout_marginTop="@dimen/internal_searchbar_radius"
+        android:layout_toLeftOf="@+id/internal_vs_cancel"
+        android:layout_toStartOf="@+id/internal_vs_cancel"
+        android:background="@drawable/shape_head_search_bg">
+
+        <include
+            layout="@layout/internal_search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/internal_iv_clear"
+            android:layout_toStartOf="@+id/internal_iv_clear" />
+
+        <ImageView
+            android:id="@+id/internal_iv_clear"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/x_button"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+    <cn.com.gxdgroup.angentbible.ui.ViewSwitcher
+        android:id="@+id/internal_vs_cancel"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/internal_searchbar_radius"
+        android:layout_marginRight="@dimen/margin_lr"
+        android:layout_marginTop="@dimen/internal_searchbar_radius"
+        app:vsReserve="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/common_blue" />-->
+
+    </cn.com.gxdgroup.angentbible.ui.ViewSwitcher>
+
+</RelativeLayout>

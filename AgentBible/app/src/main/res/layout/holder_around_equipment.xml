@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_around_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+        <TextView
+            style="@style/card_title_tv"
+            android:text="周边配套" />
+
+        <ImageView style="@style/card_arrow" />
+    </RelativeLayout>
+
+    <View style="@style/divide_style" />
+
+    <com.baidu.mapapi.map.TextureMapView
+        android:id="@+id/mTexturemap"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+
+    <HorizontalScrollView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_lr"
+            android:paddingRight="@dimen/margin_lr">
+
+            <TextView
+                android:id="@+id/tv_bank"
+                style="@style/map_poi_style"
+                android:layout_marginLeft="0dp"
+                android:drawableTop="@drawable/bank"
+                android:text="银行" />
+
+            <TextView
+                android:id="@+id/tv_bus"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/taxi"
+                android:text="公交" />
+
+            <TextView
+                android:id="@+id/tv_subway"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/subway"
+                android:text="地铁" />
+
+
+            <TextView
+                android:id="@+id/tv_edu"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/school"
+                android:text="教育" />
+
+            <TextView
+                android:id="@+id/tv_hospital"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/hospital"
+                android:text="医院" />
+
+            <TextView
+                android:id="@+id/tv_shopping"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/supermaket"
+                android:text="购物" />
+
+            <TextView
+                android:id="@+id/tv_food"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/food"
+                android:text="美食" />
+
+            <TextView
+                android:id="@+id/tv_health"
+                style="@style/map_poi_style"
+                android:drawableTop="@drawable/btn_health"
+                android:text="健身" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+</LinearLayout>

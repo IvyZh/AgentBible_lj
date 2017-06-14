@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_around_equipment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/card_title_tv"
+            android:background="@drawable/selector_common"
+            android:text="配套设施" />
+
+    </RelativeLayout>
+
+
+    <View style="@style/divide_style" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="供水:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="市政直接供水，水泵水箱供水，2个月水 泵水箱供水，2个月" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="供暖:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="无供暖" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="供电:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="环网供电、月缴、早上6点到晚上环网供电、 月缴、早上6点到晚上" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="燃气:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="市政管道天然气、2个月一缴" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="通讯设备:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="ADSL、光纤 " />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="电梯服务:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="无电梯" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="安全管理:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="24小时保安巡逻系统，小区闭路24小时保安 巡逻系统，小区闭路" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="卫生服务:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="小区入口:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text="--" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/valliage_basic_ll">
+
+            <TextView
+                style="@style/valliage_basic_label_tv"
+                android:text="停车位:" />
+
+            <TextView
+                style="@style/valliage_basic_tv"
+                android:text=" 地上107个" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

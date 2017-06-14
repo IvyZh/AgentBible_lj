@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_village_magazine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_common"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/card_title_tv"
+
+            android:text="小区月报" />
+
+        <ImageView style="@style/card_arrow" />
+    </RelativeLayout>
+
+    <View style="@style/divide_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:lineSpacingMultiplier="1.5"
+        android:maxLines="3"
+        android:padding="@dimen/margin_lr"
+        android:text="本小区9月成交均价30000元/平米，环比上月上涨10.00%， 成交二手房100套，环比上月上涨10.00%， 新增挂牌10套，环比上月上涨10.00%"
+        android:textColor="@color/text_dark"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

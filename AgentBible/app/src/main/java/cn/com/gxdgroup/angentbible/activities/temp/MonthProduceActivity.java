@@ -3,7 +3,6 @@ package cn.com.gxdgroup.angentbible.activities.temp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,7 +23,6 @@ import java.util.Date;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.com.gxdgroup.angentbible.R;
 import cn.com.gxdgroup.angentbible.adapter.common.CommonAdapter;
@@ -34,7 +32,9 @@ import cn.com.gxdgroup.angentbible.db.ProductEntity;
 import cn.com.gxdgroup.angentbible.db.UserEntity;
 import cn.com.gxdgroup.angentbible.interfaces.SimpleAppTitleListener;
 import cn.com.gxdgroup.angentbible.ui.AppTitleView;
+import cn.com.gxdgroup.angentbible.utils.DateUtils;
 import cn.com.gxdgroup.angentbible.utils.L;
+import cn.com.gxdgroup.angentbible.utils.UIUtils;
 
 /**
  * 每月生产情况
@@ -63,8 +63,13 @@ public class MonthProduceActivity extends BaseActivity {
     TextView tvSearch;
     private ArrayList<String> mUserData;
     private ArrayList<ProductEntity> mListData;
-    long startUnixTime, endUnixTime;
-    private String searchUserName;
+    private String searchUserName = "全部";
+
+
+    long startUnixTime0, endUnixtTime0;//月份
+    long startUnixTime1, endUnixtTime1;//范围
+
+    int searchType = 0;//搜索类型 0：月份搜索 1：范围搜索
 
     public static void startActivity(Activity a) {
         Intent intent = new Intent(a, MonthProduceActivity.class);
@@ -88,7 +93,6 @@ public class MonthProduceActivity extends BaseActivity {
                 });
 
 
-        //适配器
         mUserData = new ArrayList<>();
         mUserAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mUserData);
         mUserAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -97,7 +101,10 @@ public class MonthProduceActivity extends BaseActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 searchUserName = mUserData.get(position);
-                search(searchUserName);
+                if (searchType == 0)
+                    handleSearch0TimeAndSearch();
+                else
+                    handleSearch1TimeAndSearch();
             }
 
             @Override
@@ -111,10 +118,8 @@ public class MonthProduceActivity extends BaseActivity {
         lvData.setAdapter(mListAdapter);
 
 
-        // 初始化tvMonth数据和start、endUnixTime
-
+        // 给tvMonth tvStarTime tvEndTime 赋值
         Calendar c = Calendar.getInstance();
-
         int y = c.get(Calendar.YEAR);
         int m = c.get(Calendar.MONTH) + 1;
         int d = c.get(Calendar.DAY_OF_MONTH);
@@ -127,36 +132,177 @@ public class MonthProduceActivity extends BaseActivity {
         tvEndtime1.setText(s);
         tvSatrttime1.setText(s);
 
-        c.set(Calendar.DAY_OF_MONTH, 1);
-        startUnixTime = c.getTime().getTime() / 1000;
-        c.set(Calendar.DAY_OF_MONTH, c.getActualMaximum(Calendar.DAY_OF_MONTH));
-        endUnixTime = c.getTime().getTime() / 1000;
+
+        handleSearch0Time();//给startUnixTime0，endUnixTime0赋值
+        handleSearch1Time();//startUnixTime1，endUnixtTime1赋值
 
 
-        search("全部");
+        handleSearch0TimeAndSearch();//第一次进来默认加载显示按月份搜索的数据
 
     }
 
     /**
-     * 根据输入的人名来搜索
-     *
-     * @param searchUserName
+     * 处理月份搜索
      */
-    private void search(String searchUserName) {
-        if (startUnixTime == 0 || endUnixTime == 0 || searchUserName == null) {
+    private void handleSearch0Time() {
+        String[] split = tvMonth.getText().toString().trim().split("-");
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, Integer.valueOf(split[0]));
+        c.set(Calendar.MONTH, Integer.valueOf(split[1]) - 1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+        L.v("--" + c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH));
+        startUnixTime0 = getCurrentUnixTime(c);
+
+        String[] split2 = tvMonth.getText().toString().trim().split("-");
+        c.set(Calendar.YEAR, Integer.valueOf(split2[0]));
+        c.set(Calendar.MONTH, Integer.valueOf(split2[1]) - 1);
+        c.set(Calendar.DAY_OF_MONTH, c.getActualMaximum(Calendar.DAY_OF_MONTH));
+        L.v("--" + c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH));
+        endUnixtTime0 = getCurrentUnixTime(c);
+
+    }
+
+    private void handleSearch1Time() {
+        String[] split = tvSatrttime1.getText().toString().trim().split("-");
+        Calendar c = Calendar.getInstance();
+        c.set(Calendar.YEAR, Integer.valueOf(split[0]));
+        c.set(Calendar.MONTH, Integer.valueOf(split[1]) - 1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+        L.v("--" + c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH));
+        startUnixTime1 = getCurrentUnixTime(c);
+
+
+        String[] split2 = tvEndtime1.getText().toString().trim().split("-");
+        c.set(Calendar.YEAR, Integer.valueOf(split2[0]));
+        c.set(Calendar.MONTH, Integer.valueOf(split2[1]) - 1);
+        c.set(Calendar.DAY_OF_MONTH, c.getActualMaximum(Calendar.DAY_OF_MONTH));
+        L.v("--" + c.get(Calendar.YEAR) + "-" + (c.get(Calendar.MONTH) + 1) + "-" + c.get(Calendar.DAY_OF_MONTH));
+        endUnixtTime1 = getCurrentUnixTime(c);
+
+    }
+
+
+    @Override
+    protected void loadData() {
+        super.loadData();
+        queryAllPeople();
+    }
+
+    private void queryAllPeople() {
+
+        // 查询所有用户给Spnaner赋值
+        Select select = new Select();
+        List<UserEntity> list = select.from(UserEntity.class).execute();
+        if (list.size() > 0) {
+            for (UserEntity u : list) {
+                L.v("query people:" + u.toString());
+                mUserData.add(u.getUsername());
+            }
+            mUserData.add(0, "全部");
+            mUserAdapter.notifyDataSetChanged();
+        }
+
+        L.v("--------------------------------------------");
+        Select select2 = new Select();
+        List<ProductEntity> list2 = select2.from(ProductEntity.class).execute();
+
+        for (ProductEntity p : list2) {
+            L.v("query produce:" + p.toString());
+        }
+    }
+
+
+    /**
+     * 选择生产日期（月份）
+     */
+    private void pickSingleMonth() {
+        boolean[] showType = {true, true, false, false, false, false};
+        TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTimeSelectListener() {
+            @Override
+            public void onTimeSelect(Date date, View v) {//选中事件回调
+                Calendar c = Calendar.getInstance();
+                c.setTime(date);
+
+                int y = c.get(Calendar.YEAR);
+                int m = c.get(Calendar.MONTH) + 1;
+                int d = c.get(Calendar.DAY_OF_MONTH);
+
+                DecimalFormat format = new DecimalFormat("00");
+                String m2 = format.format(m);
+                String d2 = format.format(d);
+                String s = y + "-" + m2;
+                tvMonth.setText(s);
+
+                handleSearch0TimeAndSearch();
+
+            }
+        })
+                .setType(showType)
+                .build();
+        pvTime.setDate(Calendar.getInstance());
+        pvTime.show();
+    }
+
+
+    @OnClick({R.id.ll_produce_month, R.id.tv_search, R.id.tv_satrttime_1, R.id.tv_endtime_1, R.id.tv_search0})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_produce_month://选择月份
+                pickSingleMonth();
+                break;
+            case R.id.tv_search0://搜索月份
+                handleSearch0TimeAndSearch();
+                break;
+            case R.id.tv_satrttime_1://选择范围月份
+                pickMonth(0);
+                break;
+            case R.id.tv_endtime_1://选择范围月份
+                pickMonth(1);
+                break;
+            case R.id.tv_search://搜索范围
+                handleSearch1TimeAndSearch();
+                break;
+        }
+    }
+
+    // 范围搜索
+    private void handleSearch1TimeAndSearch() {
+        searchType = 1;
+        handleSearch1Time();
+        search(startUnixTime1, endUnixtTime1);
+
+    }
+
+    //月份搜索
+    private void handleSearch0TimeAndSearch() {
+        searchType = 0;
+        handleSearch0Time();
+        search(startUnixTime0, endUnixtTime0);
+    }
+
+    private void search(long startTime, long endTime) {
+
+        if (startTime == 0 || endTime == 0 || searchUserName == null) {
+            return;
+        }
+
+        if (startTime > endTime) {
+            UIUtils.showToast("查询的截止日期不能大于起始日期");
             return;
         }
 
         List<ProductEntity> resultList;
         Select select = new Select();
         if (TextUtils.equals("全部", searchUserName)) {
-            resultList = select.from(ProductEntity.class).where("dateUnixTime <= ?", endUnixTime).and("dateUnixTime >= ?", startUnixTime).execute();
+            resultList = select.from(ProductEntity.class).where("dateUnixTime <= ?", endTime).and("dateUnixTime >= ?", startTime).execute();
         } else {// 搜索特定的人的生产量
-            resultList = select.from(ProductEntity.class).where("dateUnixTime <= ?", endUnixTime).and("dateUnixTime >= ?", startUnixTime).and("productUsername = ?", searchUserName).execute();
+            resultList = select.from(ProductEntity.class).where("dateUnixTime <= ?", endTime).and("dateUnixTime >= ?", startTime).and("productUsername = ?", searchUserName).execute();
         }
 
-        if (resultList == null)
+        if (resultList == null) {
+            UIUtils.showToast("没有记录");
             return;
+        }
 
         if (resultList.size() > 0) {
             ArrayList<ProductEntity> dataList = new ArrayList<>();
@@ -191,115 +337,26 @@ public class MonthProduceActivity extends BaseActivity {
                 sumBig = sumBig.add(new BigDecimal(p.getProductTotalPrice()));
             }
             tvSum.setText(sumBig.stripTrailingZeros().toPlainString());
+            if (mListData.size() == 0)
+                UIUtils.showToast("没有记录");
         } else {//没有数据
             mListData.clear();
             mListAdapter.notifyDataSetChanged();
             tvSum.setText("0");
-        }
-
-    }
-
-
-    @Override
-    protected void loadData() {
-        super.loadData();
-        queryAllPeople();
-    }
-
-    private void queryAllPeople() {
-        Select select = new Select();
-        List<UserEntity> list = select.from(UserEntity.class).execute();
-        if (list.size() > 0) {
-            for (UserEntity u : list) {
-                L.v("query people:" + u.toString());
-                mUserData.add(u.getUsername());
-            }
-            mUserData.add(0, "全部");
-            mUserAdapter.notifyDataSetChanged();
-        }
-
-        L.v("--------------------------------------------");
-        Select select2 = new Select();
-        List<ProductEntity> list2 = select2.from(ProductEntity.class).execute();
-
-        for (ProductEntity p : list2) {
-            L.v("query produce:" + p.toString());
+            UIUtils.showToast("没有记录");
         }
     }
 
 
-//    @OnClick(R.id.ll_produce_month)
-//    public void onViewClicked() {
-//        pickMonth();
-//    }
-//
-//    @OnClick(R.id.tv_search)
-//    public void onViewClicked() {
-//    }
+    private long getCurrentUnixTime(Calendar c) {
+        int y = c.get(Calendar.YEAR);
+        int m = c.get(Calendar.MONTH) + 1;
+        int d = c.get(Calendar.DAY_OF_MONTH);
+        DecimalFormat df = new DecimalFormat("00");
+        String m2 = df.format(m);
+        String d2 = df.format(d);
 
-
-    /**
-     * 选择生产日期（月份）
-     */
-    private void pickMonth() {
-        boolean[] showType = {true, true, false, false, false, false};
-        //时间选择器
-        TimePickerView pvTime = new TimePickerView.Builder(this, new TimePickerView.OnTimeSelectListener() {
-            @Override
-            public void onTimeSelect(Date date, View v) {//选中事件回调
-                Calendar c = Calendar.getInstance();
-                c.setTime(date);
-
-                int y = c.get(Calendar.YEAR);
-                int m = c.get(Calendar.MONTH) + 1;
-                int d = c.get(Calendar.DAY_OF_MONTH);
-
-                DecimalFormat format = new DecimalFormat("00");
-                String m2 = format.format(m);
-                String d2 = format.format(d);
-                String s = y + "-" + m2;
-                tvMonth.setText(s);
-
-                c.set(Calendar.DAY_OF_MONTH, 1);
-                startUnixTime = c.getTime().getTime() / 1000;
-                c.set(Calendar.DAY_OF_MONTH, c.getActualMaximum(Calendar.DAY_OF_MONTH));
-                endUnixTime = c.getTime().getTime() / 1000;
-
-                L.v("startUnixTime:" + startUnixTime);
-                L.v("endUnixTime:" + endUnixTime);
-
-                search(searchUserName);
-            }
-        })
-                .setType(showType)
-                .build();
-        pvTime.setDate(Calendar.getInstance());
-        pvTime.show();
-    }
-
-
-    @OnClick({R.id.ll_produce_month, R.id.tv_search, R.id.tv_satrttime_1, R.id.tv_endtime_1, R.id.tv_search0})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.ll_produce_month:
-                pickMonth();
-                break;
-            case R.id.tv_search://搜索范围
-                handleStartEndUnixTime();
-                search(searchUserName);
-                break;
-            case R.id.tv_satrttime_1:
-                pickMonth(0);
-                break;
-            case R.id.tv_endtime_1:
-                pickMonth(1);
-                break;
-            case R.id.tv_search0://搜索月份
-                break;
-        }
-    }
-
-    private void handleStartEndUnixTime() {
+        return DateUtils.string2UnixTime(y + "-" + m2 + "-" + d2 + " 00:00:00");
     }
 
     private void pickMonth(final int flag) {
@@ -321,14 +378,10 @@ public class MonthProduceActivity extends BaseActivity {
                 if (flag == 0) {
                     tvSatrttime1.setText(s);
                     c.set(Calendar.DAY_OF_MONTH, 1);
-                    startUnixTime = c.getTime().getTime() / 1000;
-                    L.v("startUnixTime:" + startUnixTime);
 
                 } else {
                     tvEndtime1.setText(s);
                     c.set(Calendar.DAY_OF_MONTH, c.getActualMaximum(Calendar.DAY_OF_MONTH));
-                    endUnixTime = c.getTime().getTime() / 1000;
-                    L.v("endUnixTime:" + endUnixTime);
                 }
 
 
@@ -350,8 +403,14 @@ public class MonthProduceActivity extends BaseActivity {
         @Override
         public void convert(ViewHolder holder, ProductEntity item) {
             holder.setText(R.id.tv_username, item.getProductUsername());
-//            holder.setText(R.id.tv_producedata, tvMonth.getText().toString().trim());
-            holder.setText(R.id.tv_producedata, item.getProductDate());
+            String sDate = "";
+            if (searchType == 0) {
+                sDate = tvMonth.getText().toString().trim();
+            } else {
+                sDate = tvSatrttime1.getText().toString().trim() + " 至 " + tvEndtime1.getText().toString().trim();
+            }
+
+            holder.setText(R.id.tv_producedata, sDate);
             holder.setText(R.id.tv_total_price, item.getProductTotalPrice());
         }
     }

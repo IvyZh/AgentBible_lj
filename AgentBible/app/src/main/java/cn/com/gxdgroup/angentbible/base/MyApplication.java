@@ -25,7 +25,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        SDKInitializer.initialize(this);
+        //SDKInitializer.initialize(this);
 //        注意：在SDK各功能组件使用之前都需要调用，因此我们建议该方法放在Application的初始化方法中
         mContext = this;
         handler = new Handler();
